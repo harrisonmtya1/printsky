@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">printsky</string>
+    <string name="title_activity_main">printsky</string>
+    <string name="package_name">com.printsky.app</string>
+    <string name="custom_url_scheme">com.printsky.app</string>
+</resources>

@@ -1,0 +1,9 @@
+ng new "Nombre aplicacion" ##para crear aplicacion de angular
+ng add @capacitor/angular  ##para añadir capacitor al proyecto, añade capacitor/core capacitor/cli y capacitor/angular
+ng build                   ##copila proyecto de angular y crea la carpeta dist
+npm i @capacitor/ios       ## instala la plataforma nativas en el proyecto 
+npm i @capacitor/android   
+npx cap add android        ## añade la plataforma al proyecto
+npx cap add ios
+npx cap open android       ## abre el proyecto en android studio
+ 
