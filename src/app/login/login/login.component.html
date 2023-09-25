@@ -5,12 +5,12 @@
     </div>
     <div class="divDivisorio"></div>
     <div class="divFormulario">
-        <form>
+        <form #loginForm="ngForm" (ngSubmit)="login()">
             <label>Usuario</label>
-            <input type="text">
+            <input type="text" [(ngModel)]="usuario.usuario" name="usuario">
             <label>Contraseña</label>
-            <input type="password">
-            <button type="submit">Iniciar Sesion</button>
+            <input type="password" [(ngModel)]="usuario.clave" name="clave">
+            <button type="submit" >Iniciar Sesion</button>
             <div class="loginGoogle"> <img src="../../../assets/images/logingoogle.jpg"> </div>
         </form>
     </div>
