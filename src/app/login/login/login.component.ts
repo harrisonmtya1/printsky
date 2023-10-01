@@ -37,6 +37,7 @@ export class LoginComponent {
       .then((userCredential) => {
         const user = userCredential.user
         user.email=='harrimv206@gmail.com'? this.router.navigate(['/tecnico']):'';
+        user.email=='wasierra@correo.iue.edu.co'? this.router.navigate(['/administrador']):'';
 
       }).catch((error) => {
         const errorCode = error.code;

@@ -4,13 +4,9 @@
     border-bottom: 2px solid rgb(103, 96, 96);
 }
 
-.divEstado{
+.divOpciones{
     width: 20%;
-    height: 50px;
-    border-radius: 50%;
-    background-color: red;
-    align-self: center;
-    margin-right: 10px;
+    
 }
 
 span{

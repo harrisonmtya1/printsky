@@ -1,10 +1,10 @@
-.divPpl{
+.divPpl {
     display: flex;
     flex-direction: column;
     align-items: end;
 }
 
-.divDivisorio{
+.divDivisorio {
     background-color: black;
     height: 3px;
     width: 90%;
@@ -12,26 +12,37 @@
 
 }
 
-.btnCerrarSesion{
+.btnCerrarSesion {
     border-radius: 5px;
     height: 30px;
     align-self: center;
     margin: 10px;
     background-color: #F9C846;
-    font-size:medium;
+    font-size: medium;
 }
 
-p{
+p {
     margin: 0;
     margin-right: 20px;
 }
 
-span{
+span {
     font-weight: bold;
 }
 
-h2{
+h2 {
     margin: 0;
     margin-top: 15px;
     margin-left: 10px;
+}
+
+.btnNuevo {
+    font-size:xx-large;
+    font-weight: bold;
+    background-color: #F9C846;
+    border-radius: 50%;
+    border: solid black 1px;
+    margin: 10px;
+    height: 60px;
+    width: 60px;
 }

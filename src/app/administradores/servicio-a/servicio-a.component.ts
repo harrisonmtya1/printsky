@@ -9,14 +9,11 @@ interface Servicio{
 }
 
 @Component({
-  selector: 'app-servicio-t',
-  templateUrl: './servicio-t.component.html',
-  styleUrls: ['./servicio-t.component.css']
+  selector: 'app-servicio-a',
+  templateUrl: './servicio-a.component.html',
+  styleUrls: ['./servicio-a.component.css']
 })
-
-
-
-export class ServicioTComponent {
+export class ServicioAComponent {
 
   servicio:Servicio={
     fechaReporte: new Date(),
@@ -25,5 +22,6 @@ export class ServicioTComponent {
     dano: "Atasco y ruido en bandeja 1",
     tecnico:"Harrison Montoya Valencia"    
   }
+
 
 }
