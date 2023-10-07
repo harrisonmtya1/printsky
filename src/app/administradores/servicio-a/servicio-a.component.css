@@ -17,3 +17,20 @@ p{
     font-size: small;
     margin: 2px;
 }
+
+.btnNuevo {
+    font-size:xx-large;
+    font-weight: bold;
+    background-color: #F9C846;
+    border-radius: 50%;
+    border: solid black 1px;
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+}

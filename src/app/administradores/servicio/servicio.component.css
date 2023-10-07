@@ -1,0 +1,29 @@
+label{
+    font-weight: bold;
+    margin: 10px;
+}
+
+input,select{
+    margin: 10px;
+    border-radius: 5px;
+    border: solid 0.5px #F9C846;
+    width: 80%;
+    height: 30px;
+}
+
+textarea{
+    margin: 10px;
+    border-radius: 5px;
+    border: solid 0.5px #F9C846;
+    width: 80%;
+    height: 120px; 
+}
+
+button {
+    font-weight: bold;
+    background-color: #F9C846;
+    border-radius: 5px;
+    border: solid black 1px;
+    margin: 10px;
+    height: 30px;
+}
