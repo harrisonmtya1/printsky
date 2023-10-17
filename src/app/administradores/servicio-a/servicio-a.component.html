@@ -1,14 +1,19 @@
 <div>
     <h2>Servicios</h2>
 
-    <div class="divPrincipal">
+    <div class="divLoader" *ngIf="servicios.length<1">
+        <p>Cargando Servicios...</p>
+        <span class="loader"></span>
+    </div>
+
+    <div class="divPrincipal"  *ngFor="let servicio of servicios">
 
         <div class="divInformacion">
-            <p> <span>Fecha de reporte: </span> {{servicio.fechaReporte}} </p>
-            <p> <span>Cliente: </span> {{servicio.cliente}} </p>
-            <p> <span>Equipo: </span> {{servicio.refImpresora}}</p>
-            <p> <span>Daño: </span> {{servicio.dano}}</p>
-            <p> <span>Tecnico: </span> {{servicio.tecnico}}</p>
+            <p> <span>Fecha de reporte: </span> {{servicio.data().fechaReporte.toDate()}} </p>
+            <p> <span>Cliente: </span> {{servicio.data().cliente}} </p>
+            <p> <span>Equipo: </span> {{servicio.data().refImpresora}}</p>
+            <p> <span>Daño: </span> {{servicio.data().dano}}</p>
+            <p> <span>Tecnico: </span> {{servicio.data().tecnico}}</p>
         </div>
         <div class="divOpciones">
 

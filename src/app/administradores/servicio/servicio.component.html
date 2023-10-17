@@ -1,34 +1,34 @@
 <div>
     <h2>Nuevo Servicio</h2>
-    <form action="">
+    <form #servicioForm="ngForm" (ngSubmint)="guardar()">
         <div>
             <label>Cliente</label>
-            <input type="text">
+            <input type="text" [(ngModel)]="servicio.cliente" name="cliente">
         </div>
         <div>
             <label>Equipo</label>
-            <input type="text">
+            <input type="text"[(ngModel)]="servicio.refImpresora" name="refImpresora">
         </div>
         <div>
             <label>Descripcion Daño</label>
-            <textarea></textarea>
+            <textarea type="textarea" [(ngModel)]="servicio.dano" name="dano" ></textarea>
         </div>
         <div>
             <label>Estado</label>
-            <select name="" id="">
-                <option value="">Nuevo</option>
-                <option value="">En espera</option>
-                <option> Resulto</option>
+            <select name="estado" [(ngModel)]="servicio.estado" >
+                <option value="Nuevo">Nuevo</option>
+                <option value="En espera">En espera</option>
+                <option value="Resuelto"> Resulto</option>
             </select>
         </div>
         <div>
             <label>Tecnico</label>
-            <select name="" id="">
-                <option value=""></option>
+            <select name="tecnico" [(ngModel)]="servicio.tecnico">
+                <option *ngFor="let tecnico of tecnicos" >{{tecnico.nombre}}</option>
             </select>
         </div>
         <div>
-            <button> Guardar</button>
+            <button (click)="guardar()"> Guardar</button>
 
         </div>
 

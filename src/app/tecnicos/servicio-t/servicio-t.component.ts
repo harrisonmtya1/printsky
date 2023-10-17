@@ -21,7 +21,7 @@ interface Servicio{
 
 export class ServicioTComponent implements OnInit{
   
-  servicios: any
+  servicios: any[]=[];
 
   constructor(private fs:FirestoreService ){
      
@@ -34,18 +34,12 @@ export class ServicioTComponent implements OnInit{
  
 
   async cargarServicios(){
+    
    const datos=await this.fs.leerServicios()
    this.servicios=datos.docs
-   console.log(this.servicios[0].data())
+   
   }
 
 
-  // servicio:Servicio={
-  //   fechaReporte: new Date(),
-  //   cliente:"El colombiano",
-  //   refImpresora:"Epson 3356",
-  //   dano: "Atasco y ruido en bandeja 1",
-  //   tecnico:"Harrison Montoya Valencia"    
-  // }
 
 }

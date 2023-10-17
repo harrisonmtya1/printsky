@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirestoreService } from 'src/app/servicios/firestore.service';
 
 interface Servicio{
   fechaReporte:Date,
@@ -15,12 +16,16 @@ interface Servicio{
 })
 export class ServicioAComponent {
 
-  servicio:Servicio={
-    fechaReporte: new Date(),
-    cliente:"El colombiano",
-    refImpresora:"Epson 3356",
-    dano: "Atasco y ruido en bandeja 1",
-    tecnico:"Harrison Montoya Valencia"    
+  constructor(private fs:FirestoreService){
+    this.cargarServicios()
+  }
+
+  servicios:any[]=[]
+
+
+  async cargarServicios(){
+    const datos=await this.fs.leerServicios()
+    this.servicios=datos.docs
   }
 
 

@@ -1,3 +1,7 @@
+<div class="divLoader" *ngIf="servicios.length<1">
+    <p>Cargando Servicios...</p>
+    <span class="loader"></span>
+</div>
 
 <div class="divPrincipal" *ngFor="let servicio of servicios">
     <div class="divEstado"></div>
