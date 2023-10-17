@@ -1,10 +1,10 @@
 
-<div class="divPrincipal">
+<div class="divPrincipal" *ngFor="let servicio of servicios">
     <div class="divEstado"></div>
     <div class="divInformacion">
-       <p> <span>Fecha de reporte: </span> {{servicio.fechaReporte}} </p>
-       <p> <span>Cliente: </span> {{servicio.cliente}} </p>
-       <p> <span>Equipo: </span> {{servicio.refImpresora}}</p>
-       <p> <span>Daño: </span> {{servicio.dano}}</p>
+       <p> <span>Fecha de reporte: </span> {{servicio.data().fechaReporte.toDate()}} </p>
+       <p> <span>Cliente: </span> {{servicio.data().cliente}} </p>
+       <p> <span>Equipo: </span> {{servicio.data().equipo}}</p>
+       <p> <span>Daño: </span> {{servicio.data().dano}}</p>
     </div>
 </div>
