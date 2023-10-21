@@ -6,7 +6,10 @@
 
 .divOpciones{
     width: 20%;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
 }
 
 span{
@@ -27,13 +30,16 @@ p{
     margin: 10px;
     height: 60px;
     width: 60px;
+ }
+
+ 
+.Servicios{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 50vh;
+
 }
 
-h2 {
-    margin: 0;
-    margin-top: 15px;
-    margin-left: 10px;
-}
 
 .loader {
     width: 48px;

@@ -35,3 +35,9 @@ h2{
     margin-top: 15px;
     margin-left: 10px;
 }
+
+.Servicios{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
