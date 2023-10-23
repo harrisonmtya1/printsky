@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import { AppModule } from './app/app.module';
 
 
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 
@@ -20,5 +21,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+
 
 export default app

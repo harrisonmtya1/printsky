@@ -9,7 +9,7 @@ import { ServicioComponent } from './administradores/servicio/servicio.component
 
 
 const routes: Routes = [
-  { path: 'tecnico', component: TecnicoComponent },
+  { path: 'tecnico/:usuario', component: TecnicoComponent },
   { path: '', component: LoginComponent },
   {
     path: 'administrador', component: AdministradorComponent,

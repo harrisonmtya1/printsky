@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { getAuth, signInWithEmailAndPassword, Auth } from 'firebase/auth';
 import { Router } from '@angular/router';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 
 
-interface Usuario {
-  usuario: string
-  clave: string
-}
+
 
 @Component({
   selector: 'app-login',
@@ -21,23 +19,28 @@ export class LoginComponent {
 
   auth:Auth;
 
-  constructor(private router:Router){
+  constructor(private router:Router, private us:UsuariosService){
     this.auth=getAuth()
   }
 
 
-  usuario: Usuario = {
-    usuario: "harrimv206@gmail.com",
-    clave: "123456789"
+
+
+  usuario: any={
+    usuario:"",
+    clave:""
   }
+
 
   login() {
     
     signInWithEmailAndPassword(this.auth, this.usuario.usuario, this.usuario.clave)
       .then((userCredential) => {
         const user = userCredential.user
-        user.email=='harrimv206@gmail.com'? this.router.navigate(['/tecnico']):'';
-        user.email=='wasierra@correo.iue.edu.co'? this.router.navigate(['/administrador']):'';
+        let usuario=this.us.consultarUsuario(user.email);
+        console.log(usuario)
+        usuario!.rol=='tecnico'? this.router.navigate(['/tecnico',JSON.stringify(usuario)]):'';
+        usuario!.rol=='administrador'? this.router.navigate(['/administrador']):'';
 
       }).catch((error) => {
         const errorCode = error.code;
@@ -46,10 +49,6 @@ export class LoginComponent {
       })
 
   }
-
-
-
-
 
 }
 
