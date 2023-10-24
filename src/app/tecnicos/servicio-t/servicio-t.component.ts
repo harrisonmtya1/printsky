@@ -38,6 +38,7 @@ export class ServicioTComponent implements OnInit{
    const datos=await this.fs.leerServicios()
    this.servicios=datos.docs
    
+   
   }
 
 

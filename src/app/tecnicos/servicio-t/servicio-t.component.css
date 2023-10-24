@@ -13,6 +13,15 @@
     margin-right: 10px;
 }
 
+.nuevo{
+    width: 20%;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(38, 0, 255);
+    align-self: center;
+    margin-right: 10px;  
+}
+
 span{
     font-weight: bold;
 }
