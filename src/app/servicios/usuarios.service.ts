@@ -27,9 +27,20 @@ export class UsuariosService {
     }
   ]
 
+  usuarioLogueado:Usuario={
+    usuario:"",
+    rol:"",
+    nombre:""
+  }
+
   consultarUsuario(nombreUsuario:string |null){
     let usuario=this.usuarios.find(usuario=>usuario.usuario==nombreUsuario)
-    return usuario
+    this.usuarioLogueado={
+      usuario:usuario!.nombre,
+      rol:usuario!.rol,
+      nombre:usuario!.nombre
+    }
+    return this.usuarioLogueado
   }
 
 

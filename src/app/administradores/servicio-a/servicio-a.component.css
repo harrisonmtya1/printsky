@@ -36,9 +36,21 @@ p{
 .Servicios{
     overflow-x: hidden;
     overflow-y: auto;
-    height: 50vh;
+    height: 70vh;
 
 }
+
+h2 {
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.divLoader{
+    margin-top: 150px;
+    text-align: center;
+}
+
 
 
 .loader {

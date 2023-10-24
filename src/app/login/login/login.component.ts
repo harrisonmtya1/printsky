@@ -39,7 +39,7 @@ export class LoginComponent {
         const user = userCredential.user
         let usuario=this.us.consultarUsuario(user.email);
         console.log(usuario)
-        usuario!.rol=='tecnico'? this.router.navigate(['/tecnico',JSON.stringify(usuario)]):'';
+        usuario!.rol=='tecnico'? this.router.navigate(['/tecnico']):'';
         usuario!.rol=='administrador'? this.router.navigate(['/administrador']):'';
 
       }).catch((error) => {

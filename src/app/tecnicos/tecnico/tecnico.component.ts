@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
   selector: 'app-tecnico',
@@ -10,15 +11,12 @@ export class TecnicoComponent implements OnInit {
 
 usuario:any
 
-   constructor(private route:ActivatedRoute){
+   constructor(private us:UsuariosService){
 
    }
 
    ngOnInit(){
-     this.route.params.subscribe(params=>{
-       console.log(JSON.parse(params['usuario']))
-        
-     })
+     this.usuario=this.us.usuarioLogueado
    }
 
 }

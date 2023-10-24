@@ -1,9 +1,11 @@
-<div>
+
+    <h2>Servicios</h2>
     <div class="divLoader" *ngIf="servicios.length<1">
         <p>Cargando Servicios...</p>
         <span class="loader"></span>
     </div>
     <div class="Servicios">
+        
         <div class="divPrincipal" *ngFor="let servicio of servicios">
 
             <div class="divInformacion">
@@ -22,4 +24,3 @@
         <button routerLink="servicio" class="btnNuevo">+</button>
     </div>
 
-</div>
