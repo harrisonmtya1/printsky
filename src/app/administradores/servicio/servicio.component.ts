@@ -54,6 +54,11 @@ export class ServicioComponent {
     this.route.navigate(['/administrador'])
   }
 
+  cancelar(){
+    this.resetFormulario()
+    this.route.navigate(['/administrador'])
+  }
+
 
   resetFormulario(){
     this.servicioForm.reset();
