@@ -20,20 +20,34 @@ Requisitos:
  - Android Studio
    
 
-- Conar repositorio
+Conar repositorio
+
   git clone https://github.com/harrisonmtya1/printsky.git
 
-- Instalacion de depenencias
+################################################################################################
+
+Instalacion de depenencias
+
   Estando en el directorio del proyecto se debe ejectuar el comando 'npm install' para instalar todas las dependencias del proyecto
+
+################################################################################################
   
-- Ejecucion en computador para visualizar desde un navegador
+Ejecucion en computador para visualizar desde un navegador
+
   Ejecutar comando 'ng serve -o' esto ejecuta el proyecto y abre el navegador predeterminado
+  
   Se debe visualizar en el navegador con un tamaño de un telefono movil, ya que la interfaz esta configurada para dispositivos mobiles
 
-- Ejecucion en un dispositivo movil android
+################################################################################################
+
+Ejecucion en un dispositivo movil android
+
   Borrar directorio android que esta en la raiz del proyecto
+  
   Ejecutar el comando 'ng build' esto compila el proyecto y crea un directorio con la version de produccion en la ruta 'dist/'
+  
   Ejecutar el comando 'npx cap add android' este comando coge el directorio de produccion creado en el anterior paso y crea un directorio llamado android donde estara el poroyecto para ser ejecutado con android studio
+  
   Ejecutar el comando 'npx cap open android' esto abre el proyecto en android stuio
 
   
